@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certus Pharma CR | Distribución Farmacéutica Certificada</title>
+    <meta name="description" content="Certus Pharma CR — Distribución farmacéutica certificada para las instituciones de salud pública de Costa Rica. Confianza en cada entrega.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="nav" id="mainNav" aria-label="Navegación principal">
+            <div class="container">
+                <div class="nav__inner">
+                    <a href="index.html" class="nav__logo" aria-label="Certus Pharma CR — Inicio">
+                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img">
+                    </a>
+                    <ul class="nav__menu" role="list">
+                        <li><a href="quienes-somos.html"    class="nav__link">Quiénes Somos</a></li>
+                        <li><a href="propuesta-valor.html"  class="nav__link">Propuesta de Valor</a></li>
+                        <li><a href="diferenciadores.html"  class="nav__link">Diferenciadores</a></li>
+                        <li><a href="compromiso.html"       class="nav__link">Compromiso</a></li>
+                        <li><a href="contacto.html"         class="nav__cta-btn">Contáctenos</a></li>
+                    </ul>
+                    <button class="nav__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="nav__mobile-overlay" id="mobileOverlay" role="dialog" aria-modal="true" aria-label="Menú móvil">
+            <a href="quienes-somos.html"   class="nav__mobile-link">Quiénes Somos</a>
+            <a href="propuesta-valor.html" class="nav__mobile-link">Propuesta de Valor</a>
+            <a href="diferenciadores.html" class="nav__mobile-link">Diferenciadores</a>
+            <a href="compromiso.html"      class="nav__mobile-link">Compromiso</a>
+            <a href="contacto.html"        class="nav__mobile-cta">Contáctenos</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <svg class="hero__watermark" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="210" y="50"  width="80" height="400" rx="40" fill="white"/>
+                <rect x="50"  y="210" width="400" height="80"  rx="40" fill="white"/>
+                <circle cx="250" cy="90"  r="30" fill="white"/>
+                <circle cx="250" cy="410" r="30" fill="white"/>
+                <circle cx="90"  cy="250" r="30" fill="white"/>
+                <circle cx="410" cy="250" r="30" fill="white"/>
+                <circle cx="250" cy="250" r="46" fill="white"/>
+                <circle cx="250" cy="250" r="168" stroke="white" stroke-width="2" stroke-dasharray="10 8"/>
+                <circle cx="250" cy="250" r="220" stroke="white" stroke-width="1" stroke-dasharray="4 12" opacity="0.6"/>
+                <circle cx="82"  cy="250" r="10" fill="white" opacity="0.5"/>
+                <circle cx="418" cy="250" r="10" fill="white" opacity="0.5"/>
+                <circle cx="250" cy="82"  r="10" fill="white" opacity="0.5"/>
+                <circle cx="250" cy="418" r="10" fill="white" opacity="0.5"/>
+                <circle cx="131" cy="131" r="7"  fill="white" opacity="0.4"/>
+                <circle cx="369" cy="131" r="7"  fill="white" opacity="0.4"/>
+                <circle cx="131" cy="369" r="7"  fill="white" opacity="0.4"/>
+                <circle cx="369" cy="369" r="7"  fill="white" opacity="0.4"/>
+            </svg>
+
+            <div class="container">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Certus Pharma CR</p>
+                    <h1 class="hero__title" id="hero-title">
+                        Confianza<br><em>en cada entrega.</em>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Distribución farmacéutica certificada para las instituciones de salud pública de Costa Rica.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="contacto.html" class="btn btn--primary">
+                            Contáctenos
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#section-previews" class="btn btn--ghost">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__scroll" aria-hidden="true">
+                <div class="hero__scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- SECTION PREVIEWS -->
+        <section class="previews section-pad" id="section-previews" aria-label="Secciones del sitio">
+            <div class="container">
+                <div class="previews__header">
+                    <p class="label fade-in">Conozca Certus Pharma CR</p>
+                    <h2 class="fade-in fd1">Un proveedor construido<br>para el sistema de salud público</h2>
+                </div>
+
+                <div class="previews__grid">
+
+                    <a href="quienes-somos.html" class="pcard fade-in fd1">
+                        <span class="pcard__label">Quiénes Somos</span>
+                        <p class="pcard__title">El puente entre el mundo y la salud de Costa Rica</p>
+                        <p class="pcard__excerpt">Nacemos de la unión de cuatro trayectorias complementarias: operación de droguerías, liderazgo multinacional, dirección financiera y red médica costarricense.</p>
+                        <span class="pcard__link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="propuesta-valor.html" class="pcard fade-in fd2">
+                        <span class="pcard__label">Propuesta de Valor</span>
+                        <p class="pcard__title">Cinco pilares que responden a las necesidades reales</p>
+                        <p class="pcard__excerpt">Velocidad, costo, calidad, cumplimiento y confianza — cada uno diseñado para abordar los criterios que definen un proceso licitatorio exitoso.</p>
+                        <span class="pcard__link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="diferenciadores.html" class="pcard fade-in fd3">
+                        <span class="pcard__label">Diferenciadores</span>
+                        <p class="pcard__title">Lo que nos distingue del resto del mercado</p>
+                        <p class="pcard__excerpt">Experiencia probada en licitaciones, red global de laboratorios, solidez financiera y cumplimiento regulatorio total. No llegamos a aprender — llegamos a ejecutar.</p>
+                        <span class="pcard__link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="compromiso.html" class="pcard fade-in fd4">
+                        <span class="pcard__label">Compromiso</span>
+                        <p class="pcard__title">Nuestro compromiso con Costa Rica</p>
+                        <p class="pcard__excerpt">Detrás de cada licitación hay un paciente esperando su medicamento. Nosotros nunca lo olvidamos. Trabajamos con la CCSS, el INS y los hospitales públicos del país.</p>
+                        <span class="pcard__link">
+                            Leer más
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
+
+                <div class="home-cta fade-in fd5">
+                    <div class="home-cta__text">
+                        <h3>¿Listo para trabajar con nosotros?</h3>
+                        <p>Si busca un proveedor farmacéutico que conozca el sistema, tenga acceso al mundo y cumpla su palabra — hablemos.</p>
+                    </div>
+                    <a href="contacto.html" class="btn btn--primary">
+                        Contáctenos
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" aria-label="Pie de página">
+        <div class="container">
+            <div class="footer__main">
+                <div>
+                    <img src="images/certus_logo.png" alt="Certus Pharma CR" class="footer__logo-img">
+                    <p class="footer__tagline">
+                        Confianza en cada entrega.<br>
+                        El puente entre el mundo y la salud de Costa Rica.
+                    </p>
+                </div>
+                <nav aria-label="Navegación del pie">
+                    <p class="footer__col-title">Navegación</p>
+                    <ul class="footer__links" role="list">
+                        <li><a href="quienes-somos.html"   class="footer__link">Quiénes Somos</a></li>
+                        <li><a href="propuesta-valor.html" class="footer__link">Propuesta de Valor</a></li>
+                        <li><a href="diferenciadores.html" class="footer__link">Diferenciadores</a></li>
+                        <li><a href="compromiso.html"      class="footer__link">Compromiso</a></li>
+                        <li><a href="contacto.html"        class="footer__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <p class="footer__col-title">Sector Público</p>
+                    <ul class="footer__links" role="list">
+                        <li><span class="footer__link footer__link--static">CCSS</span></li>
+                        <li><span class="footer__link footer__link--static">INS</span></li>
+                        <li><span class="footer__link footer__link--static">Hospitales Públicos</span></li>
+                        <li><span class="footer__link footer__link--static">Ministerio de Salud</span></li>
+                        <li><span class="footer__link footer__link--static">Licitaciones</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2025 Certus Pharma CR. Todos los derechos reservados.</p>
+                <p class="footer__bottom-tag">Confianza en cada entrega | Costa Rica</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
