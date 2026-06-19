@@ -1,7 +1,10 @@
 (function () {
     'use strict';
 
-    /* ── Nav: glassmorphism on scroll ── */
+    /* ── DEBUG ── */
+    console.log('JS loaded');
+
+    /* ── Nav: scroll state ── */
     var nav = document.getElementById('mainNav');
     var ticking = false;
 
@@ -37,25 +40,20 @@
         if (e.key === 'Escape' && overlay.classList.contains('is-open')) setMenu(false);
     });
 
-    /* ── Intersection Observer: entrance animations ── */
-    var fadeEls = document.querySelectorAll('.fade-in');
+/* ── Smooth scroll with 80px nav offset ── */
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+            var targetId = this.getAttribute('href').slice(1);
+            if (!targetId) return;
+            var target = document.getElementById(targetId);
+            if (!target) return;
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        });
+    });
 
-    if (!window.IntersectionObserver) {
-        fadeEls.forEach(function (el) { el.classList.add('visible'); });
-    } else {
-        var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    io.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-
-        fadeEls.forEach(function (el) { io.observe(el); });
-    }
-
-    /* ── Contact form: submit feedback ── */
+    /* ── Contact form ── */
     var form      = document.getElementById('contactForm');
     var submitBtn = document.getElementById('formSubmit');
 
