@@ -333,15 +333,16 @@ p  { font-size: 1rem; line-height: 1.78; }
     display: flex;
     align-items: center;
     background-color: var(--color-bg-dark);
+    background-image: url('../images/NORDIC-Blog_Handling-Pharmaceuticals-in-the-Cold-Chain_feat-1024x538.jpg');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background:
-        radial-gradient(ellipse 70% 60% at 80% 50%, rgba(45,95,158,0.13) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 50% at 15% 20%, rgba(26,47,94,0.4) 0%, transparent 60%);
+    background: rgba(10, 20, 50, 0.75);
     pointer-events: none;
 }
 
@@ -716,6 +717,31 @@ p  { font-size: 1rem; line-height: 1.78; }
     transform: translate(-50%, -50%);
 }
 
+/* About photo (replaces decorative rings on quienes-somos) */
+.about__img-wrap {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    width: 100%;
+    min-height: 480px;
+    align-self: stretch;
+}
+.about__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+.about__img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 47, 94, 0.15);
+    border-radius: var(--radius-sm);
+    pointer-events: none;
+}
+
 /* Founding pillars (quienes-somos detail) */
 .founding-pillars {
     margin-top: 4rem;
@@ -917,6 +943,25 @@ p  { font-size: 1rem; line-height: 1.78; }
 }
 
 /* ==============================================
+   IMAGE DIVIDER STRIP
+=============================================== */
+.img-divider {
+    height: 280px;
+    background-image: url('../images/louis-reed-pwcKF7L4-no-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.img-divider::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 30, 61, 0.65);
+    pointer-events: none;
+}
+
+/* ==============================================
    COMMITMENT / CCSS
 =============================================== */
 .commitment {
@@ -929,6 +974,14 @@ p  { font-size: 1rem; line-height: 1.78; }
     inset: 0;
     background: radial-gradient(ellipse 50% 60% at 25% 50%, rgba(45,95,158,0.18) 0%, transparent 65%);
     pointer-events: none;
+}
+
+.commitment--photo {
+    background-size: cover;
+    background-position: center;
+}
+.commitment--photo .commitment__glow {
+    background: rgba(10, 20, 50, 0.82);
 }
 
 .commitment__inner {
@@ -1285,6 +1338,8 @@ p  { font-size: 1rem; line-height: 1.78; }
     .diff__grid          { grid-template-columns: 1fr; gap: 0; }
 
     .commitment-pillars__grid { grid-template-columns: 1fr; }
+
+    .img-divider             { height: 180px; }
 
     .contact__grid       { grid-template-columns: 1fr; gap: 2.5rem; }
     .form-row            { grid-template-columns: 1fr; }
