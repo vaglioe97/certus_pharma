@@ -998,6 +998,7 @@ p  { font-size: 1rem; line-height: 1.78; }
     pointer-events: none;
 }
 
+
 /* ==============================================
    COMMITMENT / CCSS
 =============================================== */
@@ -1372,7 +1373,9 @@ p  { font-size: 1rem; line-height: 1.78; }
     }
 
     .about__grid         { grid-template-columns: 1fr; gap: 2.5rem; }
-    .about__visual       { display: none; }
+    .about__visual       { display: block; }
+    .about__img-wrap     { min-height: 260px; margin-top: 2rem; width: 100%; }
+    .about__photo        { width: 100%; height: 260px; object-fit: cover; }
     .about__mv           { grid-template-columns: 1fr; }
 
     .founding-pillars__grid  { grid-template-columns: 1fr; }
@@ -1382,19 +1385,34 @@ p  { font-size: 1rem; line-height: 1.78; }
     .vcard:nth-child(5)  { margin: 0; }
 
     .values-full .values__grid { grid-template-columns: 1fr; }
-    .values-full .vcard        { grid-template-columns: auto 1fr; }
+    .values-full .vcard        { grid-template-columns: auto 1fr; padding: 1.5rem; }
     .values-full .vcard:last-child { grid-column: auto; }
 
     .diff__grid          { grid-template-columns: 1fr; gap: 0; }
 
     .commitment-pillars__grid { grid-template-columns: 1fr; }
 
-    .img-divider             { height: 180px; }
+    .hero {
+        background-image: url('../images/warehouse.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: scroll !important;
+    }
 
-    /* Fixed attachment is broken on iOS Safari — fall back to scroll */
-    .hero,
-    .img-divider,
-    .commitment--photo       { background-attachment: scroll; }
+    .commitment--photo {
+        background-image: url('../images/viales.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: scroll !important;
+    }
+
+    .img-divider {
+        background-image: url('../images/ChatGPT_Image_Jun_18__2026__09_20_10_PM.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: scroll !important;
+        height: 200px;
+    }
 
     .contact__grid       { grid-template-columns: 1fr; gap: 2.5rem; }
     .form-row            { grid-template-columns: 1fr; }
@@ -1429,5 +1447,64 @@ p  { font-size: 1rem; line-height: 1.78; }
         animation: none;
         opacity: 1;
         transform: none;
+    }
+}
+
+/* ==============================================
+   MOBILE VALUES CARDS — override all grid rules
+=============================================== */
+@media (max-width: 768px) {
+    .values__grid,
+    .values-full .values__grid {
+        display: block !important;
+    }
+
+    .vcard,
+    .values-full .vcard {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+        grid-column: auto !important;
+    }
+
+    .values-full .vcard:last-child {
+        grid-column: auto !important;
+    }
+}
+
+/* ==============================================
+   MOBILE BACKGROUND IMAGES — iOS Safari fix
+=============================================== */
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('../images/warehouse.png') !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+        -webkit-background-size: cover !important;
+    }
+
+    .commitment--photo {
+        background-image: url('../images/NORDIC-Blog_Handling-Pharmaceuticals-in-the-Cold-Chain_feat-1024x538.jpg') !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+        -webkit-background-size: cover !important;
+    }
+
+    .img-divider {
+        background-image: url('../images/louis-reed-pwcKF7L4-no-unsplash.jpg') !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 180px !important;
+    }
+
+    .about__visual { display: block !important; }
+    .about__img-wrap { min-height: 240px !important; }
+    .about__photo {
+        height: 240px !important;
+        width: 100% !important;
+        object-fit: cover !important;
     }
 }
