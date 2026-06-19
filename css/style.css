@@ -337,13 +337,19 @@ p  { font-size: 1rem; line-height: 1.78; }
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-blend-mode: multiply;
     overflow: hidden;
 }
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(5, 15, 35, 0.72);
+    background: linear-gradient(
+        to right,
+        rgba(5, 15, 35, 0.88) 0%,
+        rgba(5, 15, 35, 0.88) 45%,
+        rgba(5, 15, 35, 0.40) 100%
+    );
     pointer-events: none;
 }
 
@@ -948,10 +954,12 @@ p  { font-size: 1rem; line-height: 1.78; }
 =============================================== */
 .img-divider {
     height: 280px;
+    background-color: var(--color-bg-dark);
     background-image: url('../images/warehouse.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-blend-mode: multiply;
     position: relative;
     overflow: hidden;
 }
@@ -982,9 +990,10 @@ p  { font-size: 1rem; line-height: 1.78; }
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 .commitment--photo .commitment__glow {
-    background: rgba(5, 15, 35, 0.78);
+    background: rgba(5, 15, 35, 0.85);
 }
 
 .commitment__inner {
