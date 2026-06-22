@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=49">
+    <link rel="stylesheet" href="css/style.css?v=54">
 </head>
 <body>
 
@@ -18,7 +18,11 @@
             <div class="container">
                 <div class="nav__inner">
                     <a href="index.html" class="nav__logo" aria-label="Certus Pharma CR — Inicio">
-                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img">
+                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img"
+                             style="transition: transform 0.3s ease; cursor: pointer;"
+                             onmouseenter="this.style.transform='scale(1.08)'"
+                             onmouseleave="this.style.transform='scale(1)'"
+                        >
                     </a>
                     <ul class="nav__menu" role="list">
                         <li><a href="quienes-somos.html"   class="nav__link">Quiénes Somos</a></li>
@@ -81,7 +85,7 @@
                 <div class="values__header">
                     <p class="label label--center">Cinco pilares</p>
                     <h2 id="values-heading">Cinco razones para elegirnos</h2>
-                    <p>Cada pilar no es un concepto abstracto — es una capacidad operativa que hemos construido, probado y podemos demostrar. En los procesos licitatorios, la diferencia entre ganar y no ganar reside exactamente en estos cinco criterios.</p>
+                    <p>Cada pilar no es un concepto abstracto; es una capacidad operativa que hemos construido, probado y podemos demostrar. En los procesos licitatorios, la diferencia entre ganar y no ganar reside exactamente en estos cinco criterios.</p>
                 </div>
                 <div style="text-align:center;padding:3rem 0 2rem;max-width:500px;margin:0 auto;">
                     <p style="font-size:0.7rem;font-weight:500;letter-spacing:0.26em;text-transform:uppercase;color:#2D5F9E;margin-bottom:2rem;">
@@ -136,27 +140,75 @@
                                 @keyframes fadeIn {
                                     to { opacity: 1; }
                                 }
+                                .tri-inner-group {
+                                    transform-origin: 200px 210px;
+                                    animation: subtlePulse 4s ease-in-out infinite;
+                                    animation-delay: 3s;
+                                }
+                                @keyframes subtlePulse {
+                                    0%, 100% { transform: scale(1); opacity: 0.7; }
+                                    50% { transform: scale(1.04); opacity: 1; }
+                                }
                             </style>
                         </defs>
                         <!-- Outer triangle -->
                         <polygon class="tri-outer" points="200,30 30,310 370,310" fill="none" stroke="#1A2F5E" stroke-width="1.5" stroke-linejoin="round" opacity="0.5"/>
                         <!-- Inner triangle -->
-                        <polygon class="tri-inner" points="200,80 70,290 330,290" fill="none" stroke="#4A90D9" stroke-width="1.2" stroke-linejoin="round" stroke-dasharray="5 5" opacity="0.7"/>
-                        <polygon points="200,80 70,290 330,290" fill="rgba(45,95,158,0.06)" stroke="none" style="opacity:0;animation:fadeIn 0.8s ease forwards;animation-delay:2.5s;"/>
+                        <g class="tri-inner-group">
+                            <polygon class="tri-inner"
+                                     points="200,80 70,290 330,290"
+                                     fill="none"
+                                     stroke="#4A90D9"
+                                     stroke-width="1.2"
+                                     stroke-linejoin="round"
+                                     stroke-dasharray="5 5"
+                                     opacity="0.7"/>
+                            <polygon
+                                     points="200,80 70,290 330,290"
+                                     fill="rgba(45,95,158,0.06)"
+                                     stroke="none"
+                                     style="opacity:0;
+                                            animation:fadeIn 0.8s ease forwards;
+                                            animation-delay:2.5s;"/>
+                        </g>
                         <!-- Center lines -->
                         <line class="tri-line-1" x1="200" y1="210" x2="200" y2="35" stroke="#8A9BB0" stroke-width="0.8" opacity="0.6"/>
                         <line class="tri-line-2" x1="200" y1="210" x2="35" y2="305" stroke="#8A9BB0" stroke-width="0.8" opacity="0.6"/>
                         <line class="tri-line-3" x1="200" y1="210" x2="365" y2="305" stroke="#8A9BB0" stroke-width="0.8" opacity="0.6"/>
                         <!-- Center dot -->
                         <circle class="tri-dot" cx="200" cy="210" r="3" fill="#4A90D9"/>
-                        <!-- Vertex dots -->
-                        <circle class="tri-dot" cx="200" cy="30" r="4" fill="#1A2F5E"/>
-                        <circle class="tri-dot" cx="30" cy="310" r="4" fill="#1A2F5E"/>
-                        <circle class="tri-dot" cx="370" cy="310" r="4" fill="#1A2F5E"/>
-                        <!-- Labels -->
-                        <text class="tri-label" x="200" y="15" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="13" fill="#1A2F5E" font-weight="500">Calidad</text>
-                        <text class="tri-label" x="30" y="332" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="13" fill="#1A2F5E" font-weight="500">Velocidad</text>
-                        <text class="tri-label" x="370" y="332" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="13" fill="#1A2F5E" font-weight="500">Confianza</text>
+                        <!-- Top vertex — Calidad -->
+                        <circle cx="200" cy="30" r="4"
+                                fill="#1A2F5E" class="tri-dot"/>
+                        <text class="tri-label"
+                              x="200" y="15"
+                              text-anchor="middle"
+                              font-family="'Playfair Display', Georgia, serif"
+                              font-size="13"
+                              fill="#1A2F5E"
+                              font-weight="500">Calidad</text>
+
+                        <!-- Bottom-left vertex — Velocidad -->
+                        <circle cx="30" cy="310" r="4"
+                                fill="#1A2F5E" class="tri-dot"/>
+                        <text class="tri-label"
+                              x="30" y="332"
+                              text-anchor="middle"
+                              font-family="'Playfair Display', Georgia, serif"
+                              font-size="13"
+                              fill="#1A2F5E"
+                              font-weight="500">Velocidad</text>
+
+                        <!-- Bottom-right vertex — Confianza -->
+                        <circle cx="370" cy="310" r="4"
+                                fill="#1A2F5E" class="tri-dot"/>
+                        <text class="tri-label"
+                              x="370" y="332"
+                              text-anchor="middle"
+                              font-family="'Playfair Display', Georgia, serif"
+                              font-size="13"
+                              fill="#1A2F5E"
+                              font-weight="500">Confianza</text>
                         <!-- Center label -->
                         <text class="tri-label" x="200" y="197" text-anchor="middle" font-family="'Inter', sans-serif" font-size="8" fill="#8A9BB0" letter-spacing="3">CERTUS</text>
                     </svg>
@@ -316,6 +368,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=49"></script>
+    <script src="js/main.js?v=54"></script>
 </body>
 </html>

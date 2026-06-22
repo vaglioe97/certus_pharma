@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=40">
+    <link rel="stylesheet" href="css/style.css?v=54">
 </head>
 <body>
 
@@ -18,7 +18,11 @@
             <div class="container">
                 <div class="nav__inner">
                     <a href="index.html" class="nav__logo" aria-label="Certus Pharma CR — Inicio">
-                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img">
+                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img"
+                             style="transition: transform 0.3s ease; cursor: pointer;"
+                             onmouseenter="this.style.transform='scale(1.08)'"
+                             onmouseleave="this.style.transform='scale(1)'"
+                        >
                     </a>
                     <ul class="nav__menu" role="list">
                         <li><a href="quienes-somos.html"    class="nav__link">Quiénes Somos</a></li>
@@ -145,7 +149,7 @@
                     <a href="propuesta-valor.html" class="pcard">
                         <span class="pcard__label">Propuesta de Valor</span>
                         <p class="pcard__title">Cinco pilares que responden a las necesidades reales</p>
-                        <p class="pcard__excerpt">Velocidad, costo, calidad, cumplimiento y confianza — cada uno diseñado para abordar los criterios que definen un proceso licitatorio exitoso.</p>
+                        <p class="pcard__excerpt">Velocidad, costo, calidad, cumplimiento y confianza: cada uno diseñado para abordar los criterios que definen un proceso licitatorio exitoso.</p>
                         <span class="pcard__link">
                             Leer más
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -157,7 +161,7 @@
                     <a href="diferenciadores.html" class="pcard">
                         <span class="pcard__label">Diferenciadores</span>
                         <p class="pcard__title">Lo que nos distingue del resto del mercado</p>
-                        <p class="pcard__excerpt">Experiencia probada en licitaciones, red global de laboratorios, solidez financiera y cumplimiento regulatorio total. No llegamos a aprender — llegamos a ejecutar.</p>
+                        <p class="pcard__excerpt">Experiencia probada en licitaciones, red global de laboratorios, solidez financiera y cumplimiento regulatorio total. No llegamos a aprender; llegamos a ejecutar.</p>
                         <span class="pcard__link">
                             Leer más
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -183,7 +187,7 @@
                 <div class="home-cta">
                     <div class="home-cta__text">
                         <h3>¿Listo para trabajar con nosotros?</h3>
-                        <p>Si busca un proveedor farmacéutico que conozca el sistema, tenga acceso al mundo y cumpla su palabra — hablemos.</p>
+                        <p>Si busca un proveedor farmacéutico que conozca el sistema, tenga acceso al mundo y cumpla su palabra: hablemos.</p>
                     </div>
                     <a href="contacto.html" class="btn btn--primary">
                         Contáctenos
@@ -237,6 +241,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=40"></script>
+    <script src="js/main.js?v=54"></script>
 </body>
 </html>

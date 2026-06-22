@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=41">
+    <link rel="stylesheet" href="css/style.css?v=54">
 </head>
 <body>
 
@@ -18,7 +18,11 @@
             <div class="container">
                 <div class="nav__inner">
                     <a href="index.html" class="nav__logo" aria-label="Certus Pharma CR — Inicio">
-                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img">
+                        <img src="images/certus_logo.png" alt="Certus Pharma CR" class="nav__logo-img"
+                             style="transition: transform 0.3s ease; cursor: pointer;"
+                             onmouseenter="this.style.transform='scale(1.08)'"
+                             onmouseleave="this.style.transform='scale(1)'"
+                        >
                     </a>
                     <ul class="nav__menu" role="list">
                         <li><a href="quienes-somos.html"   class="nav__link nav__link--active" aria-current="page">Quiénes Somos</a></li>
@@ -98,7 +102,7 @@
                             </div>
                             <div class="about__mv-card">
                                 <h3>Visión</h3>
-                                <p>Ser el proveedor farmacéutico institucional de referencia en Costa Rica — reconocido por su confiabilidad, su innovación y su impacto real en la salud pública del país.</p>
+                                <p>Ser el proveedor farmacéutico institucional de referencia en Costa Rica: reconocido por su confiabilidad, su innovación y su impacto real en la salud pública del país.</p>
                             </div>
                         </div>
                     </div>
@@ -149,7 +153,7 @@
                         <div class="fpillar">
                             <p class="fpillar__num" aria-hidden="true">04</p>
                             <p class="fpillar__title">Red Médica Costarricense</p>
-                            <p class="fpillar__desc">Una red construida durante años de trabajo directo con el sector salud del país: especialistas, jefes de departamento, directores de hospital y tomadores de decisión clave. Esta red no se construye con estrategias de mercadeo — se construye con interacción honesta, entrega consistente y reputación ganada en el campo.</p>
+                            <p class="fpillar__desc">Una red construida durante años de trabajo directo con el sector salud del país: especialistas, jefes de departamento, directores de hospital y tomadores de decisión clave. Esta red no se construye con estrategias de mercadeo; se construye con interacción honesta, entrega consistente y reputación ganada en el campo.</p>
                         </div>
                     </div>
                 </div>
@@ -215,6 +219,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=41"></script>
+    <script src="js/main.js?v=54"></script>
 </body>
 </html>

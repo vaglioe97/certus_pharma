@@ -74,3 +74,26 @@
     }
 
 }());
+
+function toggleFaq(btn) {
+    var answer = btn.nextElementSibling;
+    var arrow = btn.querySelector('.faq-arrow');
+    var isOpen = answer.style.maxHeight !== '0px'
+                 && answer.style.maxHeight !== '';
+
+    // Close all open FAQs
+    document.querySelectorAll('.faq-answer').forEach(function (a) {
+        a.style.maxHeight = '0px';
+    });
+    document.querySelectorAll('.faq-arrow').forEach(function (a) {
+        a.textContent = '+';
+        a.style.transform = 'rotate(0deg)';
+    });
+
+    // Open clicked if it was closed
+    if (!isOpen) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        arrow.textContent = '−';
+        arrow.style.transform = 'rotate(180deg)';
+    }
+}
